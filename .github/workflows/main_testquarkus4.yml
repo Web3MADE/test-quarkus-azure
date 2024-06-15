@@ -60,3 +60,7 @@ jobs:
           app-name: "testquarkus4"
           slot-name: "Production"
           package: "*.jar"
+
+      - name: Check Container Logs
+        run: |
+          az webapp log tail --name testquarkus4 --resource-group my-eth-resource-group
